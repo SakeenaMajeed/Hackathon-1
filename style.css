@@ -66,7 +66,7 @@ body {
 }
 
 .contact-info p i {
-  margin-right: 10x;
+  margin-right: 10px;
   color: #a3c2d7;
 }
 
@@ -163,55 +163,89 @@ body {
   margin-bottom: 15px;
 }
 
-
-@media screen and (max-width: 600px) {
-  body {
-    width: fit-content;
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
   }
 
-  .left-section {
+  .sidebar,
+  .main-content {
     width: 50%;
+    padding: 20px;
   }
 
-  .right-section {
-    width: 60%;
-    padding: 10px;
+  .profile-picture {
+    width: 120px;
+    height: 120px;
   }
 
-  #display-role {
-    font-size: small;
+  .name-title h1 {
+    font-size: 1.5em;
   }
 
-  h2, p {
-    font-size: 0.8em;
+  .skills h2,
+  .main-content h2 {
+    font-size: 1.4em;
   }
 
-  .contact p {
-    font-size: xx-small;
+  .skills ul li {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    flex-direction: row;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
   }
 
-  .contact,
-  .skills,
-  .languages {
-    font-size: xx-small;
-    width: 110px;
+  .sidebar {
+    padding: 5px 5px;
+    text-align: center;
   }
 
-  .section h3 {
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .name-title h1 {
+    font-size: 1.4em;
+    margin: 2px 0;
+  }
+
+  .name-title h3 {
     font-size: 1em;
   }
 
-  .profile-picture img {
-    width: 100px;
-    height: 100px;
+  .contact-info,
+  .skills,
+  .languages {
+    font-size: 0.5em;
   }
 
-  body {
-    width: 475px;
+  .skills h2,
+  .main-content h2 {
+    font-size: 1em;
   }
 
-  button {
-    padding: 6px 12px;
-    font-size: 12px;
+  .skills ul li {
+    font-size: 0.8em;
+    padding: 2px;
+  }
+
+  #toggle-skills {
+    padding: 3px 4px;
+    font-size: 0.7em;
+  }
+
+  .main-content {
+    padding: 2px;
+  }
+
+  .main-content section {
+    padding: 1px;
   }
 }
